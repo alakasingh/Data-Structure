@@ -1,7 +1,7 @@
 # 🧩 Bracket Matcher (Stack-Based Validation)
 
 <p align="center">
-  <img src="images/technique.png" width="600"/>
+  <img src="images/technique.png" width="1000"/>
 </p>
 
 <p align="center">
@@ -16,19 +16,16 @@
 
 ## 🎥 Visual Walkthrough
 
-### Step 1: Push Opening Brackets
+### Step 1: Push Opening Brackets & Match Closing Brackets
 <p align="center">
-  <img src="images/opening.png" width="500"/>
+  <img src="images/opening.png" width="1000"/>
 </p>
 
-### Step 2: Match Closing Brackets
-<p align="center">
-  <img src="images/closing.png" width="500"/>
-</p>
+
 
 ### Step 3: Final Validation
 <p align="center">
-  <img src="images/final.png" width="500"/>
+  <img src="images/closing.png" width="1000"/>
 </p>
 
 ## 🧪 Dry Run Example
