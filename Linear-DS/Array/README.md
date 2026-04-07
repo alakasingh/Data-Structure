@@ -58,7 +58,7 @@ Once validated, the array is stored successfully. The structure is now predictab
 
 
 ## 🔗 Reference
-> ant the answer? Check out this repo: 👉 https://github.com/data-structure/linear-ds/array/crud
+> Want the answer? Check out this repo: 👉 https://github.com/alakasingh/Data-Structure/tree/main/Linear-DS/Array/CRUD-Operation
 
 
 
