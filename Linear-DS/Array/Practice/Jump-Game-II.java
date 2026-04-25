@@ -1,0 +1,48 @@
+"You are given a 0-indexed array of integers nums of length n. You are initially positioned at index 0.
+
+Each element nums[i] represents the maximum length of a forward jump from index i. In other words, if you are at index i, you can jump to any index (i + j) where:
+
+0 <= j <= nums[i] and
+i + j < n
+Return the minimum number of jumps to reach index n - 1. The test cases are generated such that you can reach index n - 1.
+
+ 
+
+Example 1:
+
+Input: nums = [2,3,1,1,4]
+Output: 2
+Explanation: The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index.
+Example 2:
+
+Input: nums = [2,3,0,1,4]
+Output: 2
+ 
+
+Constraints:
+
+1 <= nums.length <= 104
+0 <= nums[i] <= 1000
+It's guaranteed that you can reach nums[n - 1]."
+
+class Solution {
+    public int jump(int[] nums) {
+        int jumps = 0; // To count the number of jumps
+        int currentEnd = 0; // The farthest we can reach with the current number of jumps
+        int farthest = 0; // The farthest we can reach with the next jump
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            farthest = Math.max(farthest, i + nums[i]); // Update the farthest reachable index
+
+            if (i == currentEnd) { // If we've reached the end of the current jump
+                jumps++; // Increment the jump count
+                currentEnd = farthest; // Move to the next jump's end
+
+                if (currentEnd >= nums.length - 1) { // If we can reach or exceed the last index,
+                    break; // We can stop here
+                }
+            }
+        }
+        return jumps; // Return the total number of jumps needed
+    }
+}
