@@ -37,10 +37,6 @@ class Solution {
             if (i == currentEnd) { // If we've reached the end of the current jump
                 jumps++; // Increment the jump count
                 currentEnd = farthest; // Move to the next jump's end
-
-                if (currentEnd >= nums.length - 1) { // If we can reach or exceed the last index,
-                    break; // We can stop here
-                }
             }
         }
         return jumps; // Return the total number of jumps needed
