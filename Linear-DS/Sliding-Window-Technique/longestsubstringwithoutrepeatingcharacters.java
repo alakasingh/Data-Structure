@@ -25,3 +25,32 @@ Constraints:
 0 <= s.length <= 5 * 104
 s consists of English letters, digits, symbols and spaces."
 
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        int low = 0;
+        int n = s.length();
+        int max_len = 0;
+
+        for(int high = 0 ; high< n ; high++){
+
+            char currChar = s.charAt(high);
+            // if the charcter already in map, move the low pointer
+            if(map.containsKey(currChar)){
+                // move low pointer to the high of the prev occurance
+                low = Math.max(low, map.get(currChar)+1);
+            }
+
+            //update the map with current charcter and index
+            map.put(currChar, high);
+            //calculate window and update the max_len
+            max_len = Math.max(max_len, high-low+1);
+            
+        }
+        return max_len;
+        
+        
+    }
+}
