@@ -54,3 +54,14 @@ class Solution {
         
     }
 }
+
+// call the function
+
+public class Main {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        String s = "abcabcbb";
+        int result = solution.lengthOfLongestSubstring(s);
+        System.out.println("Length of the longest substring without repeating characters: " + result);
+    }
+}
